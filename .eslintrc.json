@@ -8,7 +8,6 @@
         "plugin:prettier/recommended",
         "airbnb"
     ],
-    "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -18,8 +17,7 @@
     },
     "plugins": [
         "react",
-        "prettier",
-        "@typescript-eslint"
+        "prettier"
     ],
     "rules": {
         "prettier/prettier": "error"
