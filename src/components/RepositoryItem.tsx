@@ -1,11 +1,19 @@
 import React from 'react';
 
-const RepositoryItem = ({ repository }) => (
-  <li>
-    <strong>{repository?.name}</strong>
-    <p>{repository?.description}</p>
+interface RepositoryItemProps {
+  repository: {
+    name: string;
+    description: string;
+    html_url: string;
+  }
+}
 
-    <a href={repository.html_url} target="_blank" rel="noreferrer">
+const RepositoryItem = (props: RepositoryItemProps) => (
+  <li>
+    <strong>{props.repository?.name}</strong>
+    <p>{props.repository?.description}</p>
+
+    <a href={props.repository.html_url} target="_blank" rel="noreferrer">
       Acessar repositório no Github
     </a>
   </li>
